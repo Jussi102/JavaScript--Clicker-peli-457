@@ -1,0 +1,193 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oi&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Rubik+Spray+Paint&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+
+
+}
+
+main {
+    flex: 1;
+    
+}
+
+.taustakuva {
+    background-image: url("tausta.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    border-color: rgba(169, 169, 169, 0.39);
+    border-style: solid;
+    background-color: black;
+    text-align: center;
+    padding: 2px;
+    margin: 2px;
+}
+
+header h1 {
+    font-size: 0.8em;
+    color:white;
+}
+
+
+.clickeri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.clickeri img {
+    width: 300px;
+    height: auto;
+    transition: 0.5s;
+    border-radius: 100%;
+}
+
+.clickeri img:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+
+
+.kauppa {
+
+    margin-top: -650px; 
+    margin-left: 30px;
+    text-align: center; 
+    background-image: linear-gradient(to right darkgreen black);
+
+}
+.kauppa p {
+    border-radius: 30px;
+    text-decoration: underline;
+    padding: 5px;
+    color:white;
+    font-size: 2em;
+    border-style: solid;
+    margin: 0;
+    padding-bottom: 750px;
+    margin-right: 1400px;
+    border-color: rgba(64, 63, 112, 0.438);
+
+    
+
+}
+
+.valinta1 {
+    border-radius: 20px;
+    text-align: left; 
+    border-style: solid;
+    border-color: rgba(169, 169, 169, 0.39);
+    align-items: center;
+    margin-right: 1500px;
+    margin-left: 120px;
+    padding: 5px;
+    margin-top: -700px;
+    transition: 0.3s;
+}
+
+.valinta1 p {
+    color:white;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.valinta1:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+.valinta2 {
+    border-radius: 20px;
+    text-align: left; 
+    border-style: solid;
+    border-color: rgba(169, 169, 169, 0.39);
+    padding: 5px;
+    margin-right: 1500px;
+    margin-left: 120px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.valinta2 p {
+    color:white;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.valinta2:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.valinta3 {
+    border-radius: 20px;
+    text-align: left; 
+    border-style: solid;
+    border-color: rgba(169, 169, 169, 0.39);
+    padding: 5px;
+    margin-right: 1500px;
+    margin-left: 120px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.valinta3 p {
+    color:white;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.valinta3:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.valinta4 {
+    border-radius: 20px;
+    text-align: left; 
+    border-style: solid;
+    border-color: rgba(169, 169, 169, 0.39);
+    padding: 5px;
+    margin-right: 1500px;
+    margin-left: 120px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.valinta4 p {
+    color:white;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.valinta4:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+
+footer {
+    text-align: center;
+    border-style: solid;
+    margin-bottom: 1px;
+    padding: 2px;
+    background-color: black;
+}
+
+footer h3 {
+    border-color: rgba(169, 169, 169, 0.39);
+    border-style: solid;
+    color:white;
+    font-size: 0.7em;
+}
