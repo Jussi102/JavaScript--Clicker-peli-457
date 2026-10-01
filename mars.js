@@ -1,5 +1,5 @@
 let pisteet = 0;
-let klikkausvoima = 1000000;
+let klikkausvoima = 200000;
 let klikkausVaihde = 1;
 
 let autoClicker = 1;
@@ -9,7 +9,8 @@ let autoClickerUpgradeVaihde = 1;
 let autoClickerUpgradeMax = false;
 let autoClickerVaihdeMax = false;
 let klikkausVaihdeMax = false;
-document.getElementById("lukittu").style.color = "red";
+document.getElementById("lukittu").style.color = "lime";
+document.getElementById("lukittu2").style.color = "red";
 function paivitaVarit() {
 
     // Klikkauspäivitys
@@ -47,6 +48,14 @@ function paivitaVarit() {
 
     if (klikkausVaihde === 5) {
         if (pisteet >= 20000) {
+            document.getElementById("klikkausvoima").style.color = "lime";
+        } else {
+            document.getElementById("klikkausvoima").style.color = "red";
+        }
+    }
+
+    if (klikkausVaihde === 6) {
+        if (pisteet >= 100000) {
             document.getElementById("klikkausvoima").style.color = "lime";
         } else {
             document.getElementById("klikkausvoima").style.color = "red";
@@ -245,7 +254,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
         if (pisteet >= 100) {
 
             pisteet -= 100;
-            klikkausvoima += 2;
+            klikkausvoima += 5;
             klikkausVaihde = 2;
 
             console.log(pisteet);
@@ -253,7 +262,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
 
             document.getElementById("pistemaara").textContent = pisteet;
             document.getElementById("klikkausvoima").textContent = "[500]";
-            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+5)";
+            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+20)";
 
             if (pisteet >= 500) {
                 document.getElementById("klikkausvoima").style.color = "lime";
@@ -273,7 +282,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
         if (pisteet >= 500) {
 
             pisteet -= 500;
-            klikkausvoima += 5;
+            klikkausvoima += 20;
             klikkausVaihde = 3;
 
             console.log(pisteet);
@@ -281,7 +290,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
 
             document.getElementById("pistemaara").textContent = pisteet;
             document.getElementById("klikkausvoima").textContent = "[1000]";
-            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+10)";
+            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+100)";
 
             if (pisteet >= 1000) {
                 document.getElementById("klikkausvoima").style.color = "lime";
@@ -301,7 +310,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
         if (pisteet >= 1000) {
 
             pisteet -= 1000;
-            klikkausvoima += 10;
+            klikkausvoima += 100;
             klikkausVaihde = 4;
 
             console.log(pisteet);
@@ -309,7 +318,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
 
             document.getElementById("pistemaara").textContent = pisteet;
             document.getElementById("klikkausvoima").textContent = "[5000]";
-            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+20)";
+            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+200)";
 
             if (pisteet >= 5000) {
                 document.getElementById("klikkausvoima").style.color = "lime";
@@ -329,7 +338,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
         if (pisteet >= 5000) {
 
             pisteet -= 5000;
-            klikkausvoima += 20;
+            klikkausvoima += 200;
             klikkausVaihde = 5;
 
             console.log(pisteet);
@@ -337,7 +346,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
 
             document.getElementById("pistemaara").textContent = pisteet;
             document.getElementById("klikkausvoima").textContent = "[20K]";
-            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+50)";
+            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+500)";
 
             if (pisteet >= 20000) {
                 document.getElementById("klikkausvoima").style.color = "lime";
@@ -357,7 +366,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
         if (pisteet >= 20000) {
 
             pisteet -= 20000;
-            klikkausvoima += 200;
+            klikkausvoima += 500;
             klikkausVaihde = 6;
 
             console.log(pisteet);
@@ -365,7 +374,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
 
             document.getElementById("pistemaara").textContent = pisteet;
             document.getElementById("klikkausvoima").textContent = "[100K]";
-            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+200)";
+            document.getElementById("upgradeTeksti").textContent = " Klikkaus (+1000)";
 
             if (pisteet >= 100000) {
                 document.getElementById("klikkausvoima").style.color = "lime";
@@ -381,7 +390,7 @@ document.querySelector(".valinta1").addEventListener("click", function() {
     // MAX
 
     if (klikkausVaihde === 6) {
-
+        pisteet -= 100000;
         document.getElementById("pistemaara").textContent = pisteet;
         document.getElementById("klikkausvoima").textContent = "[MAX]";
         document.getElementById("upgradeTeksti").textContent = "Klikkaus: ";
@@ -389,8 +398,8 @@ document.querySelector(".valinta1").addEventListener("click", function() {
         klikkausVaihdeMax = true;
 
         if (autoClickerUpgradeMax && autoClickerVaihdeMax && klikkausVaihdeMax) {
-    document.getElementById("lukittu").textContent = "[10M]";
-    document.getElementById("lukittu").style.color = "lime";
+    document.getElementById("lukittu2").textContent = "[10M]";
+    document.getElementById("lukittu2").style.color = "lime";
 }
         return;
     }
@@ -515,8 +524,8 @@ document.querySelector(".valinta2").addEventListener("click", function() {
             document.getElementById("autoClickerHinta").style.color = "lime";
             autoClickerVaihdeMax = true;
             if (autoClickerUpgradeMax && autoClickerVaihdeMax && klikkausVaihdeMax) {
-    document.getElementById("lukittu").textContent = "[10M]";
-    document.getElementById("lukittu").style.color = "lime";
+    document.getElementById("lukittu2").textContent = "[10M]";
+    document.getElementById("lukittu2").style.color = "lime";
 }
 
             return;
@@ -598,9 +607,9 @@ document.querySelector(".valinta3").addEventListener("click", function() {
             document.getElementById("autoClickerUpgradeHinta").textContent = "[MAX]";
             document.getElementById("autoClickerUpgradeHinta").style.color = "lime";
             autoClickerUpgradeMax = true;
-            if (autoClickerUpgradeMax && autoClickerVaihdeMax && klikkausVaihdeMax) {
-    document.getElementById("lukittu").textContent = "[10M]";
-    document.getElementById("lukittu").style.color = "lime";
+            if (autoClickerUpgradeMax === true && autoClickerVaihdeMax === true && klikkausVaihdeMax === true) {
+            document.getElementById("lukittu2").textContent = "[50M]";
+            document.getElementById("lukittu2").style.color = "lime";
 }
             return;
         }
@@ -609,9 +618,9 @@ document.querySelector(".valinta3").addEventListener("click", function() {
 });
 
 
-document.getElementById("planeetta1").addEventListener("click", function() {
-    if (pisteet >= 10000000) {
-        window.location.href = "mars.html";
+document.getElementById("planeetta2").addEventListener("click", function() {
+    if (pisteet >= 5000000) {
+        window.location.href = "lopputekstit.html";
     }
     
 });

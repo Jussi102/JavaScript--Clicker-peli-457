@@ -18,16 +18,16 @@ main {
 }
 
 .taustakuva {
-    background-image: url("whitecloud.png");
+    background-image: url("mars.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 header {
-    border-color: rgba(255, 255, 255, 0.507);
+    border-color: rgba(116, 9, 9, 0.507);
     border-style: solid;
-    background-color: rgba(120, 194, 216, 0.781);
+    background-image: linear-gradient(to right, darkred);
     text-align: center;
     padding: 7px;
     margin: 2px;
@@ -60,7 +60,7 @@ header h1 {
     transition: 0.5s;
     border-radius: 100%;
 
-    filter: drop-shadow(0 0 5px rgba(241, 242, 243, 0.9));
+    filter: drop-shadow(0 15px 30px rgba(223, 97, 58, 0.9));
 
     animation: pyori 200s linear infinite;
 }
@@ -79,7 +79,7 @@ header h1 {
 #button img:hover {
     transform: scale(1.01);
     transition: 0.5s;
-    filter: drop-shadow(0 0 8px rgb(243, 244, 245));
+    filter: drop-shadow(0 20px 40px rgba(253, 36, 21, 0.932));
 }
 
 
@@ -99,28 +99,28 @@ header h1 {
     padding-bottom: 750px;
     margin-right: 1400px;
     border-style: 5px solid;
-    border-color: white;
-    box-shadow: 0 2px 15px white;
-    background-image: linear-gradient(to right, rgba(87, 103, 107, 0.616), rgba(58, 98, 145, 0.904));
+    border-color: rgba(114, 9, 9, 0.5);
+    box-shadow: 0 2px 15px rgb(46, 20, 20);
+    background-image: linear-gradient(to right, rgb(116, 8, 8), rgb(124, 61, 10));
 
     
 
 }
 
 .valinta1 {
-    background-image: linear-gradient(to right, blue, darkblue);
+    background-image: linear-gradient(to right, darkred);
     font-size: 0.9em;
     border-radius: 5px;
     text-align: left; 
     border-style: solid;
-    border-color: rgba(169, 169, 169, 0.39);
+    border-color: rgba(207, 39, 39, 0.452);
     align-items: center;
     margin-right: 1500px;
     margin-left: 120px;
     padding: 5px;
     margin-top: -700px;
     transition: 0.3s;
-    box-shadow: 0 1px 7px white;
+    box-shadow: 0 1px 7px rgb(185, 87, 48);
 }
 
 .valinta1 #klikkausvoima {
@@ -144,18 +144,18 @@ header h1 {
 
 
 .valinta2 {
-    background-image: linear-gradient(to right, blue, darkblue);
+    background-image: linear-gradient(to right, darkred);
     font-size: 0.9em;
     border-radius: 5px;
     text-align: left; 
     border-style: solid;
-    border-color: rgba(169, 169, 169, 0.39);
+    border-color: rgba(207, 39, 39, 0.452);
     padding: 5px;
     margin-right: 1500px;
     margin-left: 120px;
     margin-top: 40px;
     transition: 0.3s;
-    box-shadow: 0 1px 7px white;
+    box-shadow: 0 1px 7px rgb(185, 87, 48);
 }
 
 
@@ -181,18 +181,18 @@ header h1 {
     transition: 0.3s;
 }
 .valinta3 {
-    background-image: linear-gradient(to right, blue, darkblue);
+    background-image: linear-gradient(to right, darkred);
     font-size: 0.9em;
     border-radius: 5px;
     text-align: left; 
     border-style: solid;
-    border-color: rgba(169, 169, 169, 0.39);
+    border-color: rgba(207, 39, 39, 0.452);
     padding: 5px;
     margin-right: 1500px;
     margin-left: 120px;
     margin-top: 40px;
     transition: 0.3s;
-    box-shadow: 0 1px 7px white;
+    box-shadow: 0 1px 7px rgb(185, 87, 48);
 }
 
 .valinta3 p {
@@ -225,13 +225,13 @@ header h1 {
     border-radius: 5px;
     text-align: left; 
     border-style: solid;
-    border-color: rgba(169, 169, 169, 0.39);
+    border-color: rgba(207, 39, 39, 0.452);
     padding: 5px;
     margin-right: 1500px;
     margin-left: 120px;
     margin-top: 40px;
     transition: 0.3s;
-    box-shadow: 0 1px 7px white;
+    box-shadow: 0 1px 7px rgb(185, 87, 48);
 }
 
 .valinta4 p {
@@ -259,7 +259,7 @@ header h1 {
     margin-left: 1500px;
     margin-right: 50px;
     padding-bottom: 380px;
-    background-image: linear-gradient(to right, rgba(12, 117, 150, 0.925), rgba(230, 207, 204, 0.541));
+    background-image: linear-gradient(to right, rgba(14, 21, 24, 0.925), rgb(104, 68, 63));
 
 }
 
@@ -268,11 +268,9 @@ header h1 {
 .avaruus #otsikko {
     font-size: 1.2em;
     color:white;
-    cursor:default;
 }
 
 .avaruus #planeetta1 {
-    background-image: linear-gradient(to right, blue, darkblue);
     font-size: 1.1em;
     font-weight: bold;
     border-style: solid;
@@ -281,28 +279,48 @@ header h1 {
     margin-left: 50px;
     margin-right: 50px;
     transition: 0.5s;
-    cursor:default;
 }
 
 .avaruus #planeetta1:hover {
     transform: scale(1.1);
     transition: 0.5s;
+    cursor:grab;
+}
+
+.avaruus #planeetta2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    border-style: solid;
+    color:white;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: 0.5s;
+    
+}
+
+.avaruus #planeetta2:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor:grab;
 }
 
 
 footer {
-    border-color: white;
-    text-align: center;
+    border-color: rgba(116, 9, 9, 0.507);
     border-style: solid;
+    background-image: linear-gradient(to right, darkred);
+    text-align: center;
+
     margin-bottom: 0px;
     padding: 4px;
-    background-color: rgba(120, 194, 216, 0.432);
+
 }
 
 footer h3 {
-    border-color: rgba(255, 255, 255, 0.507);
+    border-color: rgba(116, 9, 9, 0.507);
     border-style: solid;
-    background-color: rgba(120, 194, 216, 0.781);
+    background-image: linear-gradient(to right, rgb(85, 10, 10));
     color:white;
     font-size: 0.7em;
 }
