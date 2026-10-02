@@ -1,5 +1,5 @@
 let pisteet = 0;
-let klikkausvoima = 50000;
+let klikkausvoima = 2;
 let klikkausVaihde = 1;
 
 let autoClicker = 1;
