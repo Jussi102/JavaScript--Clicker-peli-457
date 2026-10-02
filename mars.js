@@ -1,5 +1,5 @@
 let pisteet = 0;
-let klikkausvoima = 200000;
+let klikkausvoima = 5;
 let klikkausVaihde = 1;
 
 let autoClicker = 1;
@@ -387,23 +387,28 @@ document.querySelector(".valinta1").addEventListener("click", function() {
     }
 
 
-    // MAX
+    // max
 
-    if (klikkausVaihde === 6) {
+if (klikkausVaihde === 6 && klikkausVaihdeMax === false) {
+
+    if (pisteet >= 100000) {
         pisteet -= 100000;
+
         document.getElementById("pistemaara").textContent = pisteet;
         document.getElementById("klikkausvoima").textContent = "[MAX]";
         document.getElementById("upgradeTeksti").textContent = "Klikkaus: ";
         document.getElementById("klikkausvoima").style.color = "lime";
+
         klikkausVaihdeMax = true;
 
         if (autoClickerUpgradeMax && autoClickerVaihdeMax && klikkausVaihdeMax) {
-    document.getElementById("lukittu2").textContent = "[10M]";
-    document.getElementById("lukittu2").style.color = "lime";
-}
-        return;
+            document.getElementById("lukittu2").textContent = "[3M]";
+            document.getElementById("lukittu2").style.color = "lime";
+        }
     }
 
+    return;
+}
 });
 
 
@@ -524,7 +529,7 @@ document.querySelector(".valinta2").addEventListener("click", function() {
             document.getElementById("autoClickerHinta").style.color = "lime";
             autoClickerVaihdeMax = true;
             if (autoClickerUpgradeMax && autoClickerVaihdeMax && klikkausVaihdeMax) {
-    document.getElementById("lukittu2").textContent = "[10M]";
+    document.getElementById("lukittu2").textContent = "[3M]";
     document.getElementById("lukittu2").style.color = "lime";
 }
 
@@ -608,8 +613,7 @@ document.querySelector(".valinta3").addEventListener("click", function() {
             document.getElementById("autoClickerUpgradeHinta").style.color = "lime";
             autoClickerUpgradeMax = true;
             if (autoClickerUpgradeMax === true && autoClickerVaihdeMax === true && klikkausVaihdeMax === true) {
-            document.getElementById("lukittu2").textContent = "[50M]";
-            document.getElementById("lukittu2").style.color = "lime";
+            document.getElementById("lukittu2").textContent = "[3M]";
 }
             return;
         }
@@ -619,10 +623,17 @@ document.querySelector(".valinta3").addEventListener("click", function() {
 
 
 document.getElementById("planeetta2").addEventListener("click", function() {
-    if (pisteet >= 5000000) {
+
+    if (autoClickerUpgradeMax === true && autoClickerVaihdeMax === true && klikkausVaihdeMax === true) {
+        if (pisteet >= 3000000) {
+        document.getElementById("lukittu2").style.color = "lime";
         window.location.href = "lopputekstit.html";
+        }
+
+    } else {
+        document.getElementById("lukittu2").style.color = "red";
     }
-    
+
 });
 
 
